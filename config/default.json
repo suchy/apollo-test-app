@@ -1,0 +1,21 @@
+{
+  "webserver": {
+    "port": 4567
+  },
+  "logger": {
+    "console": true,
+    "level": 100,
+    "prefix": "app",
+    "exceptions": []
+  },
+  "postgres": {
+    "database": "alacrity",
+    "user": "alacrity",
+    "password": "",
+    "pool_min": 2,
+    "pool_max": 10,
+    "migrations": {
+      "tablename": "knex_migrations"
+    }
+  }
+}
