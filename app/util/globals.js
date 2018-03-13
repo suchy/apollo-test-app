@@ -70,6 +70,13 @@ if ([
   globals.isHeroku = true;
 }
 
+// Discover proper port, Heroku exports it in an env
+if (globals.isHeroku) {
+  globals.port = process.env.PORT;
+} else {
+  globals.port = config.webserver.port;
+}
+
 /** @type {Object} Global variables available to views */
 globals.viewGlobals = {
   ga: config.ga,
