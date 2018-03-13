@@ -1,9 +1,10 @@
-import { makeExecutableSchema } from 'graphql-tools';
+const { makeExecutableSchema } = require('graphql-tools');
 
-import rootSchemaDef from './rootSchema.graphql';
+const rootSchemaDef = require('./rootSchema.graphql');
 
-const executableSchema = makeExecutableSchema({
+const schema = module.exports = {};
+
+schema.executableSchema = makeExecutableSchema({
   typeDefs: [rootSchemaDef],
 });
 
-export default executableSchema;
