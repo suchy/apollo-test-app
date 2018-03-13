@@ -1,6 +1,6 @@
 const { makeExecutableSchema } = require('graphql-tools');
 
-const rootSchemaDef = require('./rootSchema.graphql');
+const rootSchemaDef = require('./root-schema.graphql');
 
 const schema = module.exports = {};
 
