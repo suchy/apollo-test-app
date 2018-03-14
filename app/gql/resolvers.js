@@ -2,6 +2,7 @@
  * @fileOverview The GQL Schema resolvers.
  */
 const log = require('logg').getLogger('app.gql.schema');
+const { find } = require('lodash');
 
 const booksData = require('./stub-data');
 
@@ -34,6 +35,27 @@ resolvers.resolvers = {
       booksData.push(record);
 
       return record;
+    },
+    editBook: (_, {
+      bookId,
+      title,
+      author,
+      price,
+    }) => {
+      log.info(`mutation editBook bookId: ${bookId} Title: ${title} ` +
+        `Author: ${author} Price: ${price}`);
+
+      const bookRecord = find(booksData, { bookId });
+
+      if (!bookRecord) {
+        throw new Error('Book ID defined did not match a record');
+      }
+
+      bookRecord.title = title;
+      bookRecord.author = author;
+      bookRecord.price = price;
+
+      return bookRecord;
     },
   },
 };

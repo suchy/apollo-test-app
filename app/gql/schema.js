@@ -27,9 +27,7 @@ schema.typeDefs = `
       author: String!,
       price: Float!
     ): Book
-  }
 
-  type Mutation {
     editBook (
       bookId: Int!,
       title: String!,
