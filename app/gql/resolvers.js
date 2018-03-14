@@ -7,6 +7,13 @@ const booksData = require('./stub-data');
 
 const resolvers = module.exports = {};
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  // The maximum is exclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 // The resolvers
 resolvers.resolvers = {
   Query: { books: () => booksData },
@@ -15,7 +22,10 @@ resolvers.resolvers = {
       log.info(`mutation createBook Title: ${title} Author: ${author}` +
         `Price: ${price}`);
 
+      const bookId = getRandomInt(50, 1000);
+
       const record = {
+        bookId,
         title,
         author,
         price,

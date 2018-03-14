@@ -7,6 +7,7 @@ const schema = module.exports = {};
 // The GraphQL schema in string form
 schema.typeDefs = `
   type Book {
+    bookId: Int!,
     title: String!,
     author: String!,
     price: Float!
@@ -27,6 +28,16 @@ schema.typeDefs = `
       price: Float!
     ): Book
   }
+
+  type Mutation {
+    editBook (
+      bookId: Int!,
+      title: String!,
+      author: String!,
+      price: Float!
+    ): Book
+  }
+
 `;
 
 // Put together a schema
