@@ -17,12 +17,13 @@ const expressService = require('./services/express.service');
 const AppServices = module.exports = {};
 
 /**
+ * Starts all the application's required services.
  * Triggers after all databases are connected.
  *
  * @param {Object=} optOpts A set of options.
  * @return {BPromise} a promise.
  */
-AppServices.prototype.boot = BPromise.method(function (optOpts) {
+AppServices.boot = BPromise.method(function (optOpts) {
   log.info('initServices() :: Init...');
 
   let userOpts = {};

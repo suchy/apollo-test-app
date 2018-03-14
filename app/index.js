@@ -50,21 +50,18 @@ app.init = BPromise.method(function (optOpts) {
   // Initialize logging facilities
   logLib.init();
 
-  appServices.boot(optOpts);
-
-  if (!app.boot.options.log || process.env.NODE_NOLOG) {
+  if (process.env.NODE_NOLOG) {
     logLib.removeConsole();
   }
 
   log.info('Initializing... standAlone:', globals.isStandAlone,
     ':: System NODE_ENV:', process.env.NODE_ENV, ':: App Environment:', globals.env,
-    ':: Server ID:', globals.serverId, ':: On Heroku:', globals.isHeroku,
-    ':: Security:', app.boot.options.security);
+    ':: Server ID:', globals.serverId, ':: On Heroku:', globals.isHeroku);
 
   // Global exception handler
   process.on('uncaughtException', app.onNodeFail);
 
-  return app.boot.initServices()
+  return appServices.boot(optOpts)
     .catch(function (err) {
       log.error('Error on boot:', err);
       app.die(-1);
