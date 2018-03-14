@@ -1,0 +1,127 @@
+[
+  {
+    "title": "Harry Potter and the Sorcerer's stone",
+    "author": "J.K. Rowling",
+    "price": 12.34
+  },
+  {
+    "title": "Jurassic Park",
+    "author": "Michael Crichton",
+    "price": 11.22
+  },
+  {
+    "title": "Do Androids Dream of Electric Sheep?",
+    "author": "Philip K. Dick",
+    "price": 4.5
+  },
+  {
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "price": 7.8
+  },
+  {
+    "title": "Something Wicked This Way Comes",
+    "author": "Ray Bradbury",
+    "price": 2.9
+  },
+  {
+    "title": "Pride and Prejudice and Zombies",
+    "author": "Seth Grahame-Smith",
+    "price": 14.25
+  },
+  {
+    "title": "I Was Told There'd Be Cake",
+    "author": "Sloane Crosley (Goodreads Author)",
+    "price": 25.15
+  },
+  {
+    "title": "The Curious Incident of the Dog in the Night-Time",
+    "author": "Mark Haddon",
+    "price": 6.25
+  },
+  {
+    "title": "Eats, Shoots & Leaves: The Zero Tolerance Approach to Punctuation",
+    "author": "Lynne Truss",
+    "price": 12.99
+  },
+  {
+    "title":  "The Hollow Chocolate Bunnies of the Apocalypse",
+    "author": "Robert Rankin",
+    "price": 23.95
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "price": 9.99
+  },
+  {
+    "title": "The Unbearable Lightness of Being",
+    "author": "Milan Kundera",
+    "price": 9.99
+  },
+  {
+    "title": "Are You There, Vodka? It's Me, Chelsea",
+    "author": "Chelsea Handler",
+    "price": 12.22
+  },
+  {
+    "title": "Midnight in the Garden of Good and Evil",
+    "author": "John Berendt",
+    "price": 16.74
+  },
+  {
+    "title": "The Perks of Being a Wallflower",
+    "author": "Stephen Chbosky",
+    "price": 3.87
+  },
+  {
+    "title": "The Man Without Qualities",
+    "author": "Robert Musil",
+    "price": 9.19
+  },
+  {
+    "title": "The Earth, My Butt, and Other Big Round Things",
+    "author": "Carolyn Mackler",
+    "price": 12.2
+  },
+  {
+    "title": "Cloudy With a Chance of Meatballs",
+    "author": "Judi Barrett",
+    "price": 19.95
+  },
+  {
+    "title": "Where the Wild Things Are",
+    "author": "Maurice Sendak",
+    "price": 24.95
+  },
+  {
+    "title": "John Dies at the End",
+    "author": "David Wong",
+    "price": 8.33
+  },
+  {
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel García Márquez",
+    "price": 13.22
+  },
+  {
+    "title": "Me Talk Pretty One Day",
+    "author": "David Sedaris",
+    "price": 15.66
+  },
+  {
+    "title": "Stop Dressing Your Six-Year-Old Like a Skank",
+    "author": "Celia Rivenbark",
+    "price": 18.33
+  },
+  {
+    "title":  "The Long Dark Tea-Time of the Soul",
+    "author": "Douglas Adams",
+    "price": 11.22
+  },
+  {
+    "title": "A Heartbreaking Work of Staggering Genius",
+    "author": "Dave Eggers",
+    "price": 9.99
+  }
+]

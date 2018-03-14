@@ -1,10 +1,36 @@
 const { makeExecutableSchema } = require('graphql-tools');
 
-const rootSchemaDef = require('./root-schema.graphql');
+const { resolvers } = require('./resolvers');
 
 const schema = module.exports = {};
 
-schema.executableSchema = makeExecutableSchema({
-  typeDefs: [rootSchemaDef],
-});
+// The GraphQL schema in string form
+schema.typeDefs = `
+  type Book {
+    title: String!,
+    author: String!,
+    price: Float!
+  }
 
+  input BookInput {
+    title: String!,
+    author: String!,
+    price: Float!
+  }
+
+  type Query { books: [Book] }
+
+  type Mutation {
+    createBook (
+      title: String!,
+      author: String!,
+      price: Float!
+    ): Book
+  }
+`;
+
+// Put together a schema
+schema.schema = makeExecutableSchema({
+  typeDefs: schema.typeDefs,
+  resolvers,
+});
