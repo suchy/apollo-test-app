@@ -19,7 +19,10 @@ schema.typeDefs = `
     price: Float!
   }
 
-  type Query { books: [Book] }
+  type Query {
+    books: [Book]
+    book(bookId:Int!): Book
+  }
 
   type Mutation {
     createBook (

@@ -30,4 +30,4 @@ node .
 
 ## License
 
-Copyright © Alacrity, Inc. [Licensed under the MIT](https://github.com/waldophotos/kafka-avro/blob/master/LICENSE).
+Copyright © Alacrity, Inc. [Licensed under the MIT](/LICENSE).

@@ -15,9 +15,16 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+function queryBook(root, args) {
+  return find(booksData, { bookId: args.bookId });
+}
+
 // The resolvers
 resolvers.resolvers = {
-  Query: { books: () => booksData },
+  Query: {
+    book: queryBook,
+    books: () => booksData,
+  },
   Mutation: {
     createBook: (_, { title, author, price }) => {
       log.info(`mutation createBook Title: ${title} Author: ${author}` +
