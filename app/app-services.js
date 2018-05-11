@@ -48,7 +48,8 @@ AppServices.boot = BPromise.method(function (optOpts) {
   }
 
   // if run as root, downgrade to the owner of this file
-  if (process.getuid() === 0) {
+  // quickfix for nodeJS on windows
+  if (typeof process.getuid === 'function' && process.getuid() === 0) {
     fs.stat(__filename, function (err, stats) {
     // eslint-disable-next-line no-console
       if (err) { return console.error(err); }
