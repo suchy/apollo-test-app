@@ -11,7 +11,7 @@
     "email": "thanpolas@gmail.com"
   },
   "contributors": [
-    ""
+    "Balaj Marius <balajmarius@gmail.com>"
   ],
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.1",
     "graphql-tools": "^2.21.0",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.11",
     "logg": "^0.3.4",
     "pg": "^7.4.1",
     "pug": "^2.0.1"
