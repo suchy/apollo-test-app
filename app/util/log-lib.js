@@ -82,7 +82,6 @@ logger.setLevel = function () {
  * @private
  */
 logger._handleLog = function (logRecord) {
-
   // log level check.
   if (config.logger.level > logRecord.level) {
     return;
