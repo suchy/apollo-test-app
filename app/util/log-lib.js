@@ -1,8 +1,6 @@
 /**
  * @fileOverview Logging facilities, logfiles.
  */
-
-// Nodejs libs.
 const { EventEmitter } = require('events');
 const util = require('util');
 
@@ -21,7 +19,6 @@ logger.init = function () {
   initialized = true;
 
   logger.setLevel();
-
 
   // intercept log messages before they reach the console
   logg.removeConsole();

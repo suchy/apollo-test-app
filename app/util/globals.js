@@ -23,7 +23,6 @@ globals.Environments = {
   TESTING: 'testing',
 };
 
-
 /** @type {boolean} If application runs directly from shell, gets set on app */
 globals.isStandAlone = true;
 

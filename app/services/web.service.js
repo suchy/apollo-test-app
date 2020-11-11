@@ -1,7 +1,6 @@
 /**
  * @fileOverview The HTTP web servervice.
  */
-
 const http = require('http');
 
 const BPromise = require('bluebird');
@@ -38,8 +37,8 @@ web.start = function (app) {
     });
 
     web.http.listen(app.get('port'), function () {
-      log.fine('start() :: Webserver launched. Listening on' +
-        `port: ${app.get('port')}`);
+      log.fine('start() :: Webserver launched. Listening on'
+        + `port: ${app.get('port')}`);
       resolve();
     });
   });

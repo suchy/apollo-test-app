@@ -7,14 +7,6 @@
  * Copyright © Alacrity Law Limited
  * All rights reserved.
  */
-
-/**
- * @fileOverview bootstrap and master exporting module.
- */
-
-/**
- * Module dependencies.
- */
 const util = require('util');
 
 const BPromise = require('bluebird');
@@ -93,9 +85,7 @@ app.die = function (optExitCode) {
   }, 1000);
 };
 
-
 // ignition
 if (globals.isStandAlone) {
   app.init();
 }
-

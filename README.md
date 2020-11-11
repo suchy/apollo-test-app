@@ -25,7 +25,7 @@ node .
 ## Available Endpoints
 
 * GraphQL Server: http://localhost:4567/graphql
-* GraphiQL Explorer: http://localhost:4567/gqli
+* GraphQL Playground: http://localhost:4567/graphql
 
 
 ## License

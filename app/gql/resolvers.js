@@ -27,8 +27,8 @@ resolvers.resolvers = {
   },
   Mutation: {
     createBook: (_, { title, author, price }) => {
-      log.info(`mutation createBook Title: ${title} Author: ${author}` +
-        `Price: ${price}`);
+      log.info(`mutation createBook Title: ${title} Author: ${author}`
+        + `Price: ${price}`);
 
       const bookId = getRandomInt(50, 1000);
 
@@ -49,8 +49,8 @@ resolvers.resolvers = {
       author,
       price,
     }) => {
-      log.info(`mutation editBook bookId: ${bookId} Title: ${title} ` +
-        `Author: ${author} Price: ${price}`);
+      log.info(`mutation editBook bookId: ${bookId} Title: ${title} `
+        + `Author: ${author} Price: ${price}`);
 
       const bookRecord = find(booksData, { bookId });
 
