@@ -1,5 +1,5 @@
 /**
- * @fileOverview The HTTP web servervice.
+ * @fileOverview The HTTP web service.
  */
 const http = require('http');
 
@@ -8,7 +8,6 @@ const log = require('logg').getLogger('app.service.web');
 
 const web = module.exports = {};
 
-/** @type {http} The http instance */
 web.http = null;
 
 /**
@@ -28,17 +27,16 @@ web.init = function (app) {
  */
 web.start = function (app) {
   return new BPromise(function (resolve, reject) {
-    web.http.on('clientError', function (err) {
+    web.http.on('clientError', (err) => {
       log.warn('start() :: Client Error. Exception:', err);
     });
-    web.http.on('error', function (err) {
+    web.http.on('error', (err) => {
       log.error('start() :: Failed to start web server. Exception:', err);
       reject(err);
     });
 
-    web.http.listen(app.get('port'), function () {
-      log.fine('start() :: Webserver launched. Listening on'
-        + `port: ${app.get('port')}`);
+    web.http.listen(app.get('port'), () => {
+      log.info(`start() :: Webserver launched. Listening on port: ${app.get('port')}`);
       resolve();
     });
   });

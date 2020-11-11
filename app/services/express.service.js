@@ -3,12 +3,11 @@
  */
 const path = require('path');
 
+const { ApolloServer } = require('apollo-server-express');
 const BPromise = require('bluebird');
 const express = require('express');
 const cors = require('cors');
 const log = require('logg').getLogger('app.service.express');
-
-const { ApolloServer } = require('apollo-server-express');
 
 const webService = require('./web.service');
 const globals = require('../util/globals');

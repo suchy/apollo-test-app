@@ -16,13 +16,8 @@ const globals = require('./util/globals');
 const logLib = require('./util/log-lib');
 const appServices = require('./app-services');
 
-/**
- * The master boot.
- *
- */
 const app = module.exports = {};
 
-// define stand alone status
 globals.isStandAlone = require.main === module;
 
 let initialized = false;
@@ -39,7 +34,6 @@ app.init = BPromise.method(function (optOpts) {
   if (initialized) { return BPromise.resolve(); }
   initialized = true;
 
-  // Initialize logging facilities
   logLib.init();
 
   if (process.env.NODE_NOLOG) {
@@ -50,11 +44,10 @@ app.init = BPromise.method(function (optOpts) {
     ':: System NODE_ENV:', process.env.NODE_ENV, ':: App Environment:', globals.env,
     ':: Server ID:', globals.serverId, ':: On Heroku:', globals.isHeroku);
 
-  // Global exception handler
   process.on('uncaughtException', app.onNodeFail);
 
   return appServices.boot(optOpts)
-    .catch(function (err) {
+    .catch((err) => {
       log.error('Error on boot:', err);
       app.die(-1);
     });
@@ -80,9 +73,7 @@ app.die = function (optExitCode) {
   if (typeof optExitCode === 'number') {
     exitCode = optExitCode;
   }
-  setTimeout(function () {
-    process.exit(exitCode);
-  }, 1000);
+  setTimeout(() => process.exit(exitCode), 1000);
 };
 
 // ignition

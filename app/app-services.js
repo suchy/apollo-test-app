@@ -31,13 +31,8 @@ AppServices.boot = BPromise.method(function (optOpts) {
     userOpts = optOpts;
   }
 
-  /** @type {Object} define default options */
   const bootOpts = __.defaults(userOpts, {
-    // launch webserver
     webserver: true,
-
-    // log to console
-    // Env: APP_NOLOG
     log: true,
   });
 

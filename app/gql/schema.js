@@ -1,10 +1,12 @@
+/**
+ * @fileOverview The GQL Schema.
+ */
 const { makeExecutableSchema } = require('graphql-tools');
 
 const { resolvers } = require('./resolvers');
 
 const schema = module.exports = {};
 
-// The GraphQL schema in string form
 schema.typeDefs = `
   type Book {
     bookId: Int!,
@@ -41,7 +43,6 @@ schema.typeDefs = `
 
 `;
 
-// Put together a schema
 schema.schema = makeExecutableSchema({
   typeDefs: schema.typeDefs,
   resolvers,

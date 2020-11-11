@@ -8,7 +8,6 @@ const config = require('config');
 
 const globals = module.exports = {};
 
-/** @type {?Object} Application Boot options */
 globals.bootOpts = null;
 
 /**

@@ -31,15 +31,11 @@ logger.init = function () {
   // hook on logger
   try {
     logg.on('', logger._handleLog);
-    // initialize syslog
   } catch (ex) {
     // eslint-disable-next-line no-console
     console.error('Logger failed:', util.inspect(ex));
   }
 
-  //
-  // set logging exceptions
-  //
   const log = logg.getLogger('app.util.logger');
 
   if (!Array.isArray(config.logger.exceptions)) {
